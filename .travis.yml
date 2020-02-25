@@ -1,0 +1,30 @@
+dist: bionic
+notifications:
+  email: on_failure
+language: python
+
+before_install:
+- wget -nv https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+- hash -r
+- conda config --set always_yes yes --set changeps1 no
+- conda update -q conda
+- conda info -a
+- conda install anaconda-client conda-build
+
+jobs:
+  fast_finish: true
+  include:
+  - stage: test
+    name: "Test env build"
+    script:
+    - conda env create -f risingverse-py27.yml
+    - conda list -n risingverse-py27
+  - stage: deploy
+    name: "Deploy to anaconda-cloud"
+    if: branch = master
+    before_script:
+    - conda config --set anaconda_upload yes
+    script: 
+    - anaconda -t $ANACONDA_TOKEN upload --user $ANACONDA_USER risingverse-py27.yml
