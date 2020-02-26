@@ -1,4 +1,4 @@
-# risingverse conda environment
+# risingverse-py27 conda environment
 
 [![Build Status](https://travis-ci.org/ClimateImpactLab/risingverse-py27.svg?branch=master)](https://travis-ci.org/ClimateImpactLab/risingverse-py27)
 [![anaconda-cloud](https://anaconda.org/climateimpactlab/risingverse-py27/badges/version.svg)](https://anaconda.org/ClimateImpactLab/risingverse-py27)
