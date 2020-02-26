@@ -1,6 +1,6 @@
 # risingverse conda environment
 
-[![Build Status](https://travis-ci.org/ClimateImpactLab/risingverse-py27.svg?branch=master)](https://travis-ci.com/ClimateImpactLab/risingverse-py27)
+[![Build Status](https://travis-ci.org/ClimateImpactLab/risingverse-py27.svg?branch=master)](https://travis-ci.org/ClimateImpactLab/risingverse-py27)
 [![anaconda-cloud](https://anaconda.org/climateimpactlab/risingverse-py27/badges/version.svg)](https://anaconda.org/ClimateImpactLab/risingverse-py27)
 
 `conda` virtual environment for running the old Python 2.7 "Risingverse" impact-projection code.
