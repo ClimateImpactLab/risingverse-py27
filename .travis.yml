@@ -23,7 +23,7 @@ jobs:
     - conda list -n risingverse-py27
   - stage: deploy
     name: "Deploy to anaconda-cloud"
-    if: branch = master
+    if: branch = master AND type = push AND fork = false
     before_script:
     - conda config --set anaconda_upload yes
     script: 
