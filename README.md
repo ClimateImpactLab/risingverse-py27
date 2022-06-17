@@ -5,6 +5,7 @@
 
 `conda` virtual environment for running the old Python 2.7 "Risingverse" impact-projection code.
 
+This repository is a read-only archive.
 
 ## Installation
 
